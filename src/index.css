@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Baloo Bhai 2', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.infinite-scroll-component {
+  overflow: hidden !important;
+}
+
+/* Image Component */
+.emoji {
+  height: 500px;
+  width: fit-content;
+}
+
+.showError {
+  margin: 37px 0px;
+  margin-top: -54px;
+}
+
+@media only screen and (max-width:505px) {
+  .emoji {
+    height: 400px;
+  }
+
+  .showError {
+    margin-top: -40px;
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .emoji {
+    height: 300px;
+  }
+
+  .showError {
+    margin-top: -37px;
+  }
+}
+
+@media only screen and (max-width:300px) {
+  .emoji {
+    height: 290px;
+  }
+
+  .showError {
+    margin-top: -35px;
+  }
+}
+
+/* News Component */
+.somethingwentwrong {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.somethingwentwrong details {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
