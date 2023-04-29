@@ -1,7 +1,9 @@
 /* eslint-disable no-underscore-dangle */
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Routes, Route,
+} from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
 import UseContext from './Context/UseContext';
 import Navbar from './Components/Navbar';
@@ -25,6 +27,7 @@ function App() {
   const title = 'NewsMonkey';
   const pagesize = 16;
   const country = 'in';
+  // const { search } = useLocation();
 
   // const API_KEY = '0c8d38e5a8ff4712a05ef4d14e5d80b0'; // News API_KEY
   const API_KEY = 'e93da7be7e134c76afa08f33b2b2b96b'; // News API_KEY
@@ -50,7 +53,9 @@ function App() {
   useEffect(() => {
     // To stored data in localStroage
     localStorage.setItem('theme', JSON.stringify(isDark));
-  }, [isDark]);
+    setQuery(window.location.search ? window.location.search.replace('?', '') : '');
+    // console.log(query);
+  }, [isDark, query]);
 
   return (
     <div className={`${isDark ? 'dark' : ''}`}>
@@ -202,7 +207,7 @@ function App() {
               />
 
               <Route
-                path={`/${query.replaceAll(' ', '%20')}`}
+                path="search"
                 element={(
                   <News
                     key={query}

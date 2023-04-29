@@ -164,13 +164,13 @@ News.defaultProps = {
   title: 'NewsMonkey',
   pagesize: 12,
   badgeColor: 'dark',
-  country: 'in', //  Country is set to India as a Default
+  // country: 'in', //  Country is set to India as a Default
 };
 
 News.propTypes = {
   title: PropTypes.string,
   API_KEY: PropTypes.string,
-  country: PropTypes.string,
+  // country: PropTypes.string,
   category: PropTypes.string,
   pagesize: PropTypes.number,
   badgeColor: PropTypes.string,
